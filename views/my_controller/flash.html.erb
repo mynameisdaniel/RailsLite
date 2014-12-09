@@ -1,0 +1,16 @@
+Flash Notice Demonstration:
+<p>Flash objects are only available until the next request. If you refresh /flash, the flash object should no longer be avaiable.</p>
+<% if flash["notice"] %>
+  <li>There is a flash object and it is:   <%= flash["notice"] %></li>
+<% else %>
+  <li>There is no flash object.</li>
+<% end %>
+<br><br>
+<form action="/flash" method="POST">
+  <label>New Flash Value  </label>
+    <input type="text" name="flash">
+
+
+  <input type="submit">
+</form>
+
